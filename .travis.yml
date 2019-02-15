@@ -3,4 +3,14 @@ services:
   -docker
 
 script:
-  -docker build -t react-app .
+  - docker build -t patrickhub/react-app-example3 .
+  - docker images patrickhub/react-app-example3
+
+before_deploy:
+  -docker login -u patrickhub -p P@trick29
+
+deploy:
+  provider: script
+  script: docker push patrickhub/react-app-example3
+  on:
+    branch: master
