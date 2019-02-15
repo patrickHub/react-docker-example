@@ -1,0 +1,14 @@
+
+docker build -t react-app-test-cmd .
+
+docker run -it -v ${pwd}:/usr/src/app -v /usr/src/ap
+p/node_modules -p 3000:3000 --rm  react-app-test-cmd
+
+docker-compose up -d --build
+
+docker run -d --mount target=/var/data,source=B:\Doc
+ker-for-windows\DATA\,type=bind nginx
+
+docker exec 3cdf3ce ls /var/data
+docker exec 3cdf3ce more /var/data/data.json
+
