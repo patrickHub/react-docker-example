@@ -7,7 +7,7 @@ script:
   - docker images patrickhub/react-app-example3
 
 before_deploy:
-  -docker login -u patrickhub -p P@trick29
+  -docker login -u "$DOCKER_USERMANE" -p "$DOCKER_PASSWORD"
 
 deploy:
   provider: script
