@@ -1,13 +1,13 @@
 sudo: required
 services:
-  -docker
+  - docker
 
 script:
   - docker build -t patrickhub/react-app-example3 .
   - docker images patrickhub/react-app-example3
 
 before_deploy:
-  -docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 
 deploy:
   provider: script
